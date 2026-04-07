@@ -22,10 +22,10 @@ jobs:
       run: faas-cli template pull
 
     - name: Build Function Image
-      run: faas-cli build -f hello-fn.yml
+      run: faas-cli build -f stack.yaml
 
     - name: Push to Docker Hub
-      run: faas-cli push -f hello-fn.yml
+      run: faas-cli push -f stack.yaml
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
